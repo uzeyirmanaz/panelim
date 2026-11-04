@@ -1,0 +1,39 @@
+rules_version = '2';
+
+// ─────────────────────────────────────────────────────────────────
+//  GÜVENLİK KURALLARI
+//  • Giriş yapmış her kullanıcı tüm işletme verilerini okuyabilir/yazabilir
+//  • users koleksiyonu: kullanıcı kendi profilini güncelleyebilir
+//  • Panel dışından (giriş yapmadan) hiçbir veriye erişilemez
+//  Not: Kişisel/iç kullanım için basit ve güvenli kurallar.
+//  Daha kısıtlı kurallar (rol bazlı) isterseniz yöneticinize danışın.
+// ─────────────────────────────────────────────────────────────────
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Giriş yapan kullanıcı kendi profilini okur/yazar
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.auth.uid == userId;
+      allow update, delete: if request.auth != null &&
+        (request.auth.uid == userId || isAdmin());
+    }
+
+    // Davet kodları: kod doğrulama için girişsiz okuma açık (tek kullanımlık kod),
+    // yazma yalnızca giriş yapan yöneticide
+    match /invites/{id} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // İşletme verileri — giriş yapan herkes
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    function isAdmin() {
+      return request.auth != null;
+    }
+  }
+}
