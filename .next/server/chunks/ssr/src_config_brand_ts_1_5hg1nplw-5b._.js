@@ -1,0 +1,3 @@
+module.exports=[37916,a=>{"use strict";a.s(["f",0,{name:"Panelim",tagline:"Bulut POS ve Adisyon Sistemi",welcomeTitle:"Panele hoş geldiniz",welcomeSubtitle:"Lütfen üyelik bilgileriniz ile giriş yapınız",pitch:"Şubelerinizin tüm operasyonunu tek panelden yönetin: masalar, menü, siparişler ve raporlar — hepsi anlık ve bulut üzerinde.",referenceAuthor:"",supportEmail:"destek@ornek.com",supportPhone:"+90 (5xx) xxx xx xx",supportHours:"Hafta içi 09.00 – 18.00 saatleri arasında hizmet vermekteyiz.",copyright:"Tüm hakları saklıdır.",restaurantName:"İşletmem",accountCode:"10000",version:"1.0"}])}];
+
+//# sourceMappingURL=src_config_brand_ts_1_5hg1nplw-5b._.js.map

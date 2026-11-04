@@ -1,0 +1,3 @@
+module.exports=[47696,a=>{"use strict";var b=a.i(87924),c=a.i(83418);a.s(["default",0,function(){return(0,b.jsx)(c.x,{endpoint:"/api/units",singular:"Birim",emptyIcon:"library_books",emptyText:"Kayıt bulunamadı!",columns:[{key:"name",label:"Birim Adı"},{key:"sortOrder",label:"Sıra",width:"100px"}],fields:[{key:"name",label:"Birim Adı",required:!0,placeholder:"Örn: Adet, Porsiyon, Kg"},{key:"sortOrder",label:"Sıra",type:"number",defaultValue:0}]})}])}];
+
+//# sourceMappingURL=src_app_panel_birimler_page_tsx_0bbni4mjkp6ql._.js.map

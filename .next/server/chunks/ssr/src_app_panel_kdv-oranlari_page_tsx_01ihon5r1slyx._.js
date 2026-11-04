@@ -1,0 +1,3 @@
+module.exports=[21050,a=>{"use strict";var b=a.i(87924),c=a.i(83418);a.s(["default",0,function(){return(0,b.jsx)(c.x,{endpoint:"/api/vat-rates",singular:"Kdv Oranı",emptyIcon:"receipt_long",emptyText:"Kayıt bulunamadı!",columns:[{key:"rate",label:"Oran",format:a=>(0,b.jsxs)("span",{className:"font-semibold text-[#303030]",children:["%",Number(a.rate).toLocaleString("tr-TR")]})}],fields:[{key:"rate",label:"Oran (%)",type:"number",required:!0,placeholder:"Örn: 10"}]})}])}];
+
+//# sourceMappingURL=src_app_panel_kdv-oranlari_page_tsx_01ihon5r1slyx._.js.map

@@ -1,0 +1,3 @@
+module.exports=[1752,a=>{"use strict";var b=a.i(87924),c=a.i(83418);a.s(["default",0,function(){return(0,b.jsx)(c.x,{endpoint:"/api/features",singular:"Özellik",emptyIcon:"view_list",emptyText:"Kayıt bulunamadı!",columns:[{key:"name",label:"Özellik Adı"},{key:"price",label:"Fiyat",width:"160px",format:a=>(0,b.jsx)("span",{className:"font-semibold text-[#303030]",children:(0,c.z)(a.price)})}],fields:[{key:"name",label:"Özellik Adı",required:!0,placeholder:"Örn: Ekstra Peynir"},{key:"price",label:"Fiyat (₺)",type:"number",defaultValue:0}]})}])}];
+
+//# sourceMappingURL=src_app_panel_ozellikler_page_tsx_0fnlmrra50yl4._.js.map

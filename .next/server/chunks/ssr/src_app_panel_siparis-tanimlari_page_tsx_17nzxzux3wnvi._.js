@@ -1,0 +1,3 @@
+module.exports=[3374,a=>{"use strict";var b=a.i(87924),c=a.i(83418);a.s(["default",0,function(){return(0,b.jsx)(c.x,{endpoint:"/api/discounts",singular:"Sipariş Tanımı",emptyIcon:"shopping_basket",emptyText:"Kayıt bulunamadı!",columns:[{key:"name",label:"Tanım Adı"}],fields:[{key:"name",label:"Tanım Adı",required:!0,placeholder:"Örn: Servis Notu, Paket Notu"}]})}])}];
+
+//# sourceMappingURL=src_app_panel_siparis-tanimlari_page_tsx_17nzxzux3wnvi._.js.map

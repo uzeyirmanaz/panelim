@@ -1,0 +1,3 @@
+module.exports=[66496,a=>{"use strict";var b=a.i(87924),c=a.i(83418);a.s(["default",0,function(){return(0,b.jsx)(c.x,{endpoint:"/api/kitchen-groups",singular:"Mutfak Grubu",emptyIcon:"dvr",emptyText:"Kayıt bulunamadı!",columns:[{key:"name",label:"Grup Adı"}],fields:[{key:"name",label:"Grup Adı",required:!0,placeholder:"Örn: Sıcak Mutfak, Soğuk Bar, Fırın"}]})}])}];
+
+//# sourceMappingURL=src_app_panel_mutfak-gruplari_page_tsx_1v7qjl86d-mf9._.js.map

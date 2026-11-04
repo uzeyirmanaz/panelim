@@ -27,6 +27,11 @@ jobs:
       - name: Kodu indir
         uses: actions/checkout@v4
 
+      - name: Kaynak kodunu ac (src.zip varsa)
+        run: |
+          if [ -f src.zip ]; then unzip -q -o src.zip; fi
+          ls src | head
+
       - name: Node.js kur
         uses: actions/setup-node@v4
         with:

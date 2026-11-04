@@ -1,0 +1,3 @@
+module.exports=[39644,a=>{"use strict";var b=a.i(87924),c=a.i(83418);a.s(["default",0,function(){return(0,b.jsx)(c.x,{endpoint:"/api/customers",singular:"Müşteri",emptyIcon:"assignment_ind",emptyText:"Kayıt bulunamadı!",columns:[{key:"name",label:"Ad Soyad"},{key:"phone",label:"Telefon",width:"160px"},{key:"address",label:"Adres"},{key:"createdAt",label:"Kayıt Tarihi",width:"170px",format:a=>(0,b.jsx)("span",{className:"text-neutral-500",children:(0,c.w)(a.createdAt)})}],fields:[{key:"name",label:"Ad Soyad",required:!0},{key:"phone",label:"Telefon",placeholder:"05xx xxx xx xx"},{key:"address",label:"Adres",type:"textarea"},{key:"note",label:"Not",type:"textarea"}]})}])}];
+
+//# sourceMappingURL=src_app_panel_musteriler_page_tsx_0lr-8p0tb8fba._.js.map
