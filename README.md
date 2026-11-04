@@ -41,7 +41,7 @@ firestore.rules                 ← Veritabanı güvenlik kuralları
 
 ## Kurulum
 
-**GitHub'a yükle, otomatik yayınlansın:** → `GITHUB-YAYINLA.md` (en kısa yol)
+**GitHub'a yükle, otomatik yayınlansın:** → `GITHUB-YAYINLA.md` (ayar gerektirmez)
 
 **Firebase kurulumu (Auth + Firestore):** → `FIREBASE-KURULUM.md` — teknik bilgi
 gerektirmeyen, adım adım Türkçe rehber.
