@@ -1,0 +1,71 @@
+name: Siteyi Yayinla
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yayin
+  cancel-in-progress: true
+
+jobs:
+  yayinla:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodu indir
+        uses: actions/checkout@v4
+
+      - name: Kaynak kodunu ac
+        run: |
+          if [ -f files.zip ]; then unzip -q -o files.zip; fi
+          if [ -f src.zip ]; then unzip -q -o src.zip; fi
+          ls src | head
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Site adresinin alt yolunu hesapla
+        id: base
+        run: |
+          REPO="${GITHUB_REPOSITORY#*/}"
+          if [[ "$REPO" == *.github.io ]]; then
+            echo "path=" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=/$REPO" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Bağımlılıkları kur
+        run: npm ci
+
+      - name: Siteyi derle
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.base.outputs.path }}
+        run: npm run build
+
+      - name: Hazır siteyi ana klasöre yaz
+        run: |
+          if [ -f .yayin-listesi ]; then
+            while IFS= read -r f; do [ -n "$f" ] && rm -rf -- "$f"; done < .yayin-listesi
+          fi
+          ls -A out > .yayin-listesi
+          cp -a out/. .
+          touch .nojekyll
+
+      - name: Depoya kaydet
+        run: |
+          git config user.name "yayin-robotu"
+          git config user.email "yayin-robotu@users.noreply.github.com"
+          git add -A -f
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok."
+          else
+            git commit -m "Site otomatik yayinlandi [skip ci]"
+            git push
+          fi
