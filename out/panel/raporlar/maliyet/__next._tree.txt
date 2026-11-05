@@ -4,4 +4,4 @@
 3:[["children",{"s":"maliyet","h":96,"c":"$Q4"}]]
 2:[["children",{"s":"raporlar","h":96,"c":"$Q3"}]]
 1:[["children",{"s":"panel","h":96,"c":"$Q2"}]]
-0:{"b":"5Mkq-tHRGO4eMPtCQkxqt","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"hcELKejusC6fJUzdmnkOl","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
